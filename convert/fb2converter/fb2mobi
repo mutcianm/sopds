@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PREFIX=`dirname $0`
+OUTDIR=$(mktemp -d)
+TMPDIR=`dirname $2`
+
+[ -e $TMPDIR ] || mkdir $TMPDIR
+$PREFIX/fb2c convert --ow --nodirs --to mobi "$1" "$OUTDIR"
+mv $(find "$OUTDIR" -type f) "$2"
+rmdir $OUTDIR
