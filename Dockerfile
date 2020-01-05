@@ -16,6 +16,7 @@ ENV DB_KIND=sqlite \
 RUN apk add --update \
     libc6-compat \
     tzdata tar p7zip build-base bash \
+    py3-mysqlclient py3-psycopg2 \
     openssl-dev \
     libxml2-dev \
     libxslt-dev \
