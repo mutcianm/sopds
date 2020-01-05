@@ -10,6 +10,7 @@ ENV DB_KIND=sqlite \
  DB_PASS=sopds \
  DB_LOCATION=localhost \
  SOPDS_LANG=ru-RU \
+ TELEGRAM_TOKEN=NONE \
  INIT=false
 
 RUN apk add --update \
