@@ -16,14 +16,15 @@ ENV DB_KIND=sqlite \
 RUN apk add --update \
     libc6-compat \
     tzdata tar p7zip build-base bash \
-    py3-mysqlclient py3-psycopg2 \
+    mariadb-connector-c-dev \
     openssl-dev \
     libxml2-dev \
     libxslt-dev \
     libffi-dev \
     libc-dev \
     jpeg-dev \
-    zlib-dev
+    zlib-dev && \
+    pip3 install mysqlclient
 
 ADD . /
 ADD https://github.com/rupor-github/fb2converter/releases/download/1.41/fb2c-linux.7z fb2c.7z

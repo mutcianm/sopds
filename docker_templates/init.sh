@@ -8,12 +8,12 @@ CONFIG_FILE="sopds/settings.py"
 case "$DB_KIND" in
     "mariadb")
         sed -e \
-            "s/\$$DB_NAME/$DB_NAME/g;s/\$DB_USER/$DB_USER/g;s/\$DB_PASS/$DB_PASS/g;s/\$DB_LOCATION/$DB_LOCATION/g" \
+            "s/\$DB_NAME/$DB_NAME/g;s/\$DB_USER/$DB_USER/g;s/\$DB_PASS/$DB_PASS/g;s/\$DB_LOCATION/$DB_LOCATION/g" \
             ./$TEMPLATE_DIR/mariadb > ./$CONFIG_FILE
         ;;
     "postgres")
         sed -e \
-            "s/\$$DB_NAME/$DB_NAME/g;s/\$DB_USER/$DB_USER/g;s/\$DB_PASS/$DB_PASS/g;s/\$DB_LOCATION/$DB_LOCATION/g" \
+            "s/\$DB_NAME/$DB_NAME/g;s/\$DB_USER/$DB_USER/g;s/\$DB_PASS/$DB_PASS/g;s/\$DB_LOCATION/$DB_LOCATION/g" \
             ./$TEMPLATE_DIR/postgres > ./$CONFIG_FILE
         ;;
     "sqlite")
