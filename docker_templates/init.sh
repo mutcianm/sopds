@@ -25,7 +25,6 @@ if [[ "$INIT" == "true" ]] ; then
   python3 manage.py migrate
   python3 manage.py sopds_util clear
   echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', '', 'admin')" | python3 manage.py shell
-  python3 manage.py sopds_util setconf SOPDS_ROOT_LIB "library/"
   python3 manage.py sopds_util setconf SOPDS_LANGUAGE "$SOPDS_LANG"
   python3 manage.py sopds_util setconf SOPDS_SCAN_START_DIRECTLY True
   python3 manage.py sopds_util setconf SOPDS_FB2TOEPUB "convert/fb2converter/fb2epub"

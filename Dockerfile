@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-VOLUME ["/library", "/sqlite-data"]
+VOLUME ["/books", "/sqlite-data"]
 EXPOSE 8001
 
 # valid options: mariadb postgres sqlite
